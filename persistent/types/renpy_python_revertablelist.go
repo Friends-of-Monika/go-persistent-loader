@@ -4,12 +4,11 @@ func init() {
 	registerType("renpy.python", "RevertableList", &RenpyPythonRevertableList{})
 }
 
-type RenpyPythonRevertableList struct {
-	content []interface{}
-}
+type RenpyPythonRevertableList []interface{}
 
 func (r RenpyPythonRevertableList) PyNew(_ ...interface{}) (interface{}, error) {
-	return &RenpyPythonRevertableList{make([]interface{}, 0)}, nil
+	inst := make(RenpyPythonRevertableList, 0)
+	return &inst, nil
 }
 
 func (r RenpyPythonRevertableList) PyDictSet(key, value interface{}) error {
@@ -17,5 +16,5 @@ func (r RenpyPythonRevertableList) PyDictSet(key, value interface{}) error {
 }
 
 func (r *RenpyPythonRevertableList) Append(v interface{}) {
-	r.content = append(r.content, v)
+	*r = append(*r, v)
 }

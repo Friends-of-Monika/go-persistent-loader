@@ -195,7 +195,7 @@ type RenpyPersistentPersistent struct {
 	SeenTranslates                      BuiltinSet
 	MasMonikaNickname                   string
 	MasPmWorksOut                       bool
-	MasMonikaLovecountertime            *DatetimeDatetime
+	MasMonikaLovecountertime            DatetimeDatetime
 	MasO31DockstatReturn                bool
 	MasIdleData                         RenpyPythonRevertableDict
 	MasPmHadPromDate                    unknown
@@ -286,7 +286,7 @@ type RenpyPersistentPersistent struct {
 	FlaggedMonikatopic                  string
 	ClosedSelf                          bool
 	MasBdayConfirmedParty               bool
-	MasLastAhogeDt                      *DatetimeDatetime
+	MasLastAhogeDt                      DatetimeDatetime
 	MasJustFriends                      bool
 	MasF14IntroSeen                     bool
 	MasPmEyeColor                       string
@@ -295,7 +295,7 @@ type RenpyPersistentPersistent struct {
 	MasPmMonikaEvil                     bool
 	VirtualSize                         *types.Tuple
 	MasO31TrickOrTreatingStartEarly     bool
-	MasLastKiss                         *DatetimeDatetime
+	MasLastKiss                         DatetimeDatetime
 	MasPmHasCodeExperience              bool
 	MasDockstatCmWaitCount              int
 	MasPlayerBdayDate                   int
@@ -396,13 +396,13 @@ type RenpyPersistentPersistent struct {
 	MasF14Date                          int
 	MasAcsEnablePromisering             bool
 	SpecialPoems                        *RenpyPythonRevertableList
-	CurrentMonikatopic                  string
+	CurrentMonikatopic                  int
 	MasD25D25DateCount                  int
 	VersionNumber                       string
 	MasPmLikeVocaloids                  bool
 	MasPianoKeymaps                     RenpyPythonRevertableDict
 	MasTimeconcernclose                 bool
-	MasFirstKiss                        *DatetimeDatetime
+	MasFirstKiss                        DatetimeDatetime
 	MasMoodDatabase                     RenpyPythonRevertableDict
 	Mcname                              string
 	UpdateVersion                       RenpyPythonRevertableDict
@@ -440,7 +440,7 @@ type RenpyPersistentPersistent struct {
 	MasApologyDatabase                  RenpyPythonRevertableDict
 	MasTimeconcerngraveyard             bool
 	MasWindowreactsDatabase             RenpyPythonRevertableDict
-	MasLastHoldDt                       *DatetimeDatetime
+	MasLastHoldDt                       DatetimeDatetime
 	MasLateFarewell                     bool
 	GhostMenu                           bool
 	MasXpHrx                            float64
