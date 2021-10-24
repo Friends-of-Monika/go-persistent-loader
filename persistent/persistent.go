@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/nlpodyssey/gopickle/pickle"
-	"mon.icu/go-persistent-loader/persistent/types"
+	"mon.icu/pkg/go-persistent-loader/persistent/types"
 )
 
 func Load(path string) (*types.RenpyPersistentPersistent, error) {

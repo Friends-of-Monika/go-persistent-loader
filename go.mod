@@ -1,4 +1,4 @@
-module mon.icu/go-persistent-loader
+module pkg.mon.icu/go-persistent-loader
 
 go 1.17
 

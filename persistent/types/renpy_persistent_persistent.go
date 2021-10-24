@@ -5,7 +5,7 @@ import (
 	"reflect"
 
 	"github.com/nlpodyssey/gopickle/types"
-	"mon.icu/go-persistent-loader/persistent/util"
+	"mon.icu/pkg/go-persistent-loader/persistent/util"
 )
 
 func init() {
