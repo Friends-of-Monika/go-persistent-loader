@@ -396,7 +396,7 @@ type RenpyPersistentPersistent struct {
 	MasF14Date                          int
 	MasAcsEnablePromisering             bool
 	SpecialPoems                        *RenpyPythonRevertableList
-	CurrentMonikatopic                  int
+	CurrentMonikatopic                  any
 	MasD25D25DateCount                  int
 	VersionNumber                       string
 	MasPmLikeVocaloids                  bool
