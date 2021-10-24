@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"mon.icu/go-persistent-loader/persistent/util"
 	"github.com/nlpodyssey/gopickle/types"
+	"mon.icu/go-persistent-loader/persistent/util"
 )
 
 func init() {
