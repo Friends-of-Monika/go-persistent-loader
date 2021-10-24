@@ -11,8 +11,8 @@ func (r RenpyPythonRevertableList) PyNew(_ ...interface{}) (interface{}, error) 
 	return &inst, nil
 }
 
-func (r RenpyPythonRevertableList) PyDictSet(key, value interface{}) error {
-	panic("implement me")
+func (r RenpyPythonRevertableList) PyDictSet(_, _ interface{}) error {
+	panic("RenpyPythonRevertableList#PyDictSet is not implemented")
 }
 
 func (r *RenpyPythonRevertableList) Append(v interface{}) {
