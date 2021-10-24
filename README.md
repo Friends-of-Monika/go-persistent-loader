@@ -21,7 +21,7 @@ and fields that are proven to be dynamically typed are typed `any`.
 
 ```go
 import (
-"github.com/friends-of-monika/go-persistent-loader"
+    "github.com/friends-of-monika/go-persistent-loader"
 )
 
 func main() {
