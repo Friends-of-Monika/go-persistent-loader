@@ -25,11 +25,11 @@ import (
 )
 
 func main() {
-save, err := persistent.Load("/home/user/.renpy/persistent")
-if err != nil {
-panic(err)
-}
-
-fmt.Println(save.Playername)
+    save, err := persistent.Load("/home/user/.renpy/persistent")
+    if err != nil {
+        panic(err)
+    }
+    
+    fmt.Println(save.Playername)
 }
 ```
