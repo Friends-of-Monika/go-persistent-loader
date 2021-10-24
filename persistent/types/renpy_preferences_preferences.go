@@ -1,7 +1,7 @@
 package types
 
 import (
-	"errors"
+	"fmt"
 	"reflect"
 
 	"github.com/friends-of-monika/go-persistent-loader/persistent/util"
@@ -60,7 +60,7 @@ func (r *RenpyPreferencesPreferences) PyDictSet(key, value interface{}) error {
 	normKey := util.SnakeToCamelCase(key.(string))
 	field := reflect.ValueOf(r).Elem().FieldByName(normKey)
 	if !field.IsValid() {
-		return errors.New(normKey)
+		return fmt.Errorf("%s %s", reflect.ValueOf(value).Kind().String(), normKey)
 	}
 
 	if value != nil {
