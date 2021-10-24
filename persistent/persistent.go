@@ -5,8 +5,8 @@ import (
 	"errors"
 	"os"
 
+	"github.com/friends-of-monika/go-persistent-loader/persistent/types"
 	"github.com/nlpodyssey/gopickle/pickle"
-	"mon.icu/pkg/go-persistent-loader/persistent/types"
 )
 
 func Load(path string) (*types.RenpyPersistentPersistent, error) {

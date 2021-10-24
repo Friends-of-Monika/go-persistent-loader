@@ -4,7 +4,7 @@ import (
 	"errors"
 	"reflect"
 
-	"mon.icu/pkg/go-persistent-loader/persistent/util"
+	"github.com/friends-of-monika/go-persistent-loader/persistent/util"
 	"github.com/nlpodyssey/gopickle/types"
 )
 

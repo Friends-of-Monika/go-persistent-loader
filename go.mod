@@ -1,4 +1,4 @@
-module pkg.mon.icu/go-persistent-loader
+module github.com/friends-of-monika/go-persistent-loader
 
 go 1.17
 
