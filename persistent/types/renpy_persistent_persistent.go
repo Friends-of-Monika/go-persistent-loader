@@ -489,6 +489,9 @@ type RenpyPersistentPersistent struct {
 	MasSongsDatabase                    RenpyPythonRevertableDict
 	MasPmAHater                         bool
 	MasPmDrinksSoda                     bool
+	MasIslandsProgress					int
+	MasIslandsStartLvl					int
+	MasIslandsUnlocks					map[interface{}]interface{}
 }
 
 func (r RenpyPersistentPersistent) PyNew(_ ...interface{}) (interface{}, error) {
@@ -500,6 +503,8 @@ func (r *RenpyPersistentPersistent) PyDictSet(key, value interface{}) error {
 	field := reflect.ValueOf(r).Elem().FieldByName(normKey)
 	if !field.IsValid() {
 		return fmt.Errorf("%s %s", reflect.ValueOf(value).Kind().String(), normKey)
+		//fmt.Printf("%s %s\n", reflect.ValueOf(value).Kind().String(), normKey)
+		//return nil
 	}
 
 	if value != nil {
