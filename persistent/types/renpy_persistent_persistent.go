@@ -489,9 +489,10 @@ type RenpyPersistentPersistent struct {
 	MasSongsDatabase                    RenpyPythonRevertableDict
 	MasPmAHater                         bool
 	MasPmDrinksSoda                     bool
-	MasIslandsProgress					int
-	MasIslandsStartLvl					int
-	MasIslandsUnlocks					map[interface{}]interface{}
+	MasIslandsProgress                  int
+	MasIslandsStartLvl                  int
+	MasIslandsUnlocks                   map[interface{}]interface{}
+	MasPmCaresIslandProgress            unknown
 }
 
 func (r RenpyPersistentPersistent) PyNew(_ ...interface{}) (interface{}, error) {
