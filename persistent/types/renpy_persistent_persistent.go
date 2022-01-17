@@ -485,7 +485,7 @@ type RenpyPersistentPersistent struct {
 	MasF14DateAffGain                   int
 	MasAffMismatches                    int
 	MasPmHaveFamMessBetter              unknown
-	MasFilereactsGiftAffGained          int
+	MasFilereactsGiftAffGained          float64
 	MasSongsDatabase                    RenpyPythonRevertableDict
 	MasPmAHater                         bool
 	MasPmDrinksSoda                     bool
@@ -493,6 +493,13 @@ type RenpyPersistentPersistent struct {
 	MasIslandsStartLvl                  int
 	MasIslandsUnlocks                   map[interface{}]interface{}
 	MasPmCaresIslandProgress            unknown
+	MasIncompatPerForcedUpdateFailed    bool
+	MasIncompatPerUserWillRestore       bool
+	MasIncompatPerEntered               bool
+	MasPmBakes                          unknown
+	MasIncompatPerForcedUpdate          bool
+	MasIncompatPerRpyFilesFound         bool
+	MasPmReadJekyllHyde                 bool
 }
 
 func (r RenpyPersistentPersistent) PyNew(_ ...interface{}) (interface{}, error) {
@@ -503,9 +510,7 @@ func (r *RenpyPersistentPersistent) PyDictSet(key, value interface{}) error {
 	normKey := util.SnakeToCamelCase(key.(string))
 	field := reflect.ValueOf(r).Elem().FieldByName(normKey)
 	if !field.IsValid() {
-		return fmt.Errorf("%s %s", reflect.ValueOf(value).Kind().String(), normKey)
-		//fmt.Printf("%s %s\n", reflect.ValueOf(value).Kind().String(), normKey)
-		//return nil
+		return fmt.Errorf("couldn't assign value to %s field %s", reflect.ValueOf(value).Kind().String(), normKey)
 	}
 
 	if value != nil {
