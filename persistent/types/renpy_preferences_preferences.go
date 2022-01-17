@@ -60,7 +60,7 @@ func (r *RenpyPreferencesPreferences) PyDictSet(key, value interface{}) error {
 	normKey := util.SnakeToCamelCase(key.(string))
 	field := reflect.ValueOf(r).Elem().FieldByName(normKey)
 	if !field.IsValid() {
-		return fmt.Errorf("%s %s", reflect.ValueOf(value).Kind().String(), normKey)
+		return fmt.Errorf("couldn't assign value to %s field %s", reflect.ValueOf(value).Kind().String(), normKey)
 	}
 
 	if value != nil {
